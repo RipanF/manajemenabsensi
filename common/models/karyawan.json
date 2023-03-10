@@ -1,0 +1,34 @@
+{
+  "name": "Karyawan",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nik": {
+      "type": "integer",
+      "required": true,
+      "index": {"unique": true}
+    },
+    "nama": {
+      "type": "string"
+    }
+  },
+  "mixins": {
+    "Aggregate": true
+  },
+  "validations": [],
+  "relations": {
+    "absensi": {
+      "type": "hasMany",
+      "model": "Absensi",
+      "foreignKey": "nik",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Karyawan",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "waktu": {
+      "type": "timestamp",
+      "default": "$now"
+    },
+    "status": {
+      "type": "integer",
+      "required": true
+    },
+    "jenis": {
+      "type": "integer",
+      "required": true
+    },
+    "nik": {
+      "type": "integer"
+    }
+  },
+  "mixins": {
+    "Aggregate": true
+  },
+  "validations": [],
+  "relations": {
+    "karyawan": {
+      "type": "belongsTo",
+      "model": "Karyawan",
+      "foreignKey": "nik"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,13 @@
+{
+  "MyDB": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "manajemenabsensi",
+    "password": "",
+    "name": "MyDB",
+    "user": "",
+    "useNewUrlParser": true,
+    "connector": "mongodb"
+  }
+}
